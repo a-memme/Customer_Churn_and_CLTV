@@ -9,7 +9,7 @@ Although common analytic approaches such as clustering or classification can be 
 
 For the current analysis, we leverage "Buy 'Till You Die' probabilistic models to help account for the problem stated above, where the probability that a customer will churn (and the inverse probability of a customer's retention) are ouputted, and used to calculate a customer's lifetime value. Here, we have a more colourful and informative view on customer loyalty and consequently value, providing extremely useful information on segmenting and targeting consumers of interest.
 
-### BG/NBD
+### Purchasing Behaviour & Churn - BG/NBD Model
 The BTYD model of choice in our analysis is the popularly-used Beta Geometric/Negative Binomial Distribution model - a revised and improved version of the Pareto/NBD model developed in 1987.
 
 Essentially, the model looks to predict future transactions of each individual customer by taking into account their individual purchasing history in reference to the general customer pattern. It treats purchasing phenomena as a 2 step process: 
@@ -19,15 +19,10 @@ Essentially, the model looks to predict future transactions of each individual c
 As long as customer hasn't churned (is "alive), assumptions are:
   - The number of transactions made by a single consumer in a period of time follows a Poisson distribution with a transaction rate λ
   - Purchases for individual consumers are made randomly around their own transaction rate
-  - Transaction rate varies from consumer to consumer, and follows a Gamma distribution with shape r and scale a for the entire dataset
+  - Transaction rate λ varies from consumer to consumer, and follows a Gamma distribution with shape r and scale a for the entire dataset
 
 **2. Dropout Process ("Dieing"):**
    - Every customer has a dropout probability p
    - Dropouts vary from consumer to consumer, and follows a Beta distribution with parameters a and β for the entire dataset
 
-
-leaving the binary classification of churned/not churned 
-
-
-
-predicting one key issues with churn 
+### CLTV - Gamma Gamma Submodel
