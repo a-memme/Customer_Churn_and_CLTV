@@ -18,7 +18,7 @@ Essentially, the model looks to predict future transactions of each individual c
 
 As long as customer hasn't churned (is "alive), assumptions are:
   - The number of transactions made by a single consumer in a period of time follows a Poisson distribution with a transaction rate λ
-  - Purchases are made randomly around their own transaction rate
+  - Purchases for individual consumers are made randomly around their own transaction rate
   - Transaction rate varies from consumer to consumer, and follows a Gamma distribution with shape r and scale a for the entire dataset
 
 **2. Dropout Process ("Dieing"):**
