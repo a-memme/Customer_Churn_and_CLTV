@@ -1,4 +1,4 @@
-# Customer_Churn_and_CLTV
+# Determining Customer Churn and Lifetime Value
 *Leveraging the BG/NBD Model and Gamma Gamma submodel to evaluate and predict customer churn, retention, and lifetime value.*
 
 ## Overview
