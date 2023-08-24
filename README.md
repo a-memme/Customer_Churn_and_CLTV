@@ -13,13 +13,15 @@ For the current analysis, we leverage "Buy 'Till You Die' probabilistic models t
 The BTYD model of choice in our analysis is the popularly-used Beta Geometric/Negative Binomial Distribution model - a revised and improved version of the Pareto/NBD model developed in 1987.
 
 Essentially, the model looks to predict future transactions of each individual customer by taking into account their individual purchasing history in reference to the general customer pattern. It treats purchasing phenomena as a 2 step process: 
-1. Transaction Process (Buying)
+
+**1. Transaction Process (Buying)**
+
 As long as customer hasn't churned (is "alive), assumptions are:
   - The number of transactions made by a single consumer in a period of time follows a Poisson distribution with a transaction rate λ
   - Purchases are made randomly around their own transaction rate
   - Transaction rate varies from consumer to consumer, and follows a Gamma distribution with shape r and scale a for the entire dataset
 
-2. Dropout Process ("Dieing"):
+**2. Dropout Process ("Dieing"):**
    - Every customer has a dropout probability p
    - Dropouts vary from consumer to consumer, and follows a Beta distribution with parameters a and β for the entire dataset
 
