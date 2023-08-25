@@ -3,18 +3,19 @@
 
 ## Overview
 ### Purpose
-Understanding customer churn and the lifetime value of your consumers are both critical questions in any business, and are especially relevant for effective, tactical marketing strategies. 
+Churn, retention and lifetime value are all trigger terms used extremely often in many industries - being able to accurately identify, calculate and understand these metrics are critical to any business looking to understand their consumer base and maximize their potential.
 
-Although common analytic approaches such as clustering or classification can be effective in segmenting or predicting churn respectively, one key issue that often exists is censored data - that is, the customer's purchasing lifetime is often unfinished thus making the application of this classification (whether a customer has churned or not) very problematic. This is particularly relevant in non-contractual business settings where a consumer can decide to "cut ties" at any moment, so any distinguishing feature of churn needed in order to train a model would essentially be arbitrary (i.e a customer that just made a purchase yesterday may churn tomorrow, and a customer who hasn't made a purchase in 2 years may purchase again tomorrow).
+Although common analytic approaches such as clustering or classification can be effective in segmenting or predicting churn respectively, one key issue that often exists is the censored data present - that is, the customer's purchasing lifetime is typically unfinished, making the application of this classification (whether a customer has churned or not) very problematic. This is particularly relevant in non-contractual business settings where a consumer can decide to "cut ties" at any moment, so any distinguishing feature of churn needed in order to train a model would essentially be arbitrary (i.e a customer that just made a purchase yesterday may churn tomorrow, and a customer who hasn't made a purchase in 2 years may purchase again tomorrow).
 
-For the current analysis, we leverage "Buy 'Till You Die' probabilistic models to help account for the problem stated above, where the probability that a customer will churn (and the inverse probability of a customer's retention) are ouputted, and used to calculate a customer's lifetime value. Here, we have a more colourful and informative view on customer loyalty and consequently value, providing extremely useful information on segmenting and targeting consumers of interest.
+For the current analysis, we leverage "Buy 'Till You Die' probabilistic models to help account for the problem stated above, where in addition to predicting the number of purchases that an individual will make in a future period of time, the probability that said customer will churn is also outputted based on their historical buying behaviour. Given these outputs, we are able to calculate a customer's lifetime value over a variable period of time and begin to analyze overall retention and loyalty of a consumer base. The above approach allows us to make rather accurate predictions with minimal buying behaviour data, and provide a more realistic framework in expressing churn by 
+probabilistic means rather than categorical (yes/no boolean). Given this, we are left with a set of rich information that is very easily interpretable for segmenting, targeting and actioning around our consumer base.
 
 ### Purchasing Behaviour & Churn - BG/NBD Model
 The BTYD model of choice in our analysis is the popularly-used Beta Geometric/Negative Binomial Distribution model - a revised and improved version of the Pareto/NBD model developed in 1987.
 
 Essentially, the model looks to predict future transactions of each individual customer by taking into account their individual purchasing history in reference to the general customer pattern. It treats purchasing phenomena as a 2 step process: 
 
-**1. Transaction Process (Buying)**
+**1. Transaction Process ("Buying")**
 
 As long as customer hasn't churned (is "alive), assumptions are:
   - The number of transactions made by a single consumer in a period of time follows a Poisson distribution with a transaction rate λ
