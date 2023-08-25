@@ -13,7 +13,7 @@ probabilistic means rather than categorical (yes/no boolean). Given this, we are
 ### Purchasing Behaviour & Churn - BG/NBD Model
 The BTYD model of choice in our analysis is the popularly-used Beta Geometric/Negative Binomial Distribution model - a revised and improved version of the Pareto/NBD model developed in 1987.
 
-Essentially, the model looks to predict future transactions of each individual customer by taking into account their individual purchasing history in reference to the general customer pattern. It treats purchasing phenomena as a 2 step process: 
+Essentially, the model looks to predict future transactions of each individual customer by taking into account their individual purchasing history in reference to the general customer pattern. It treats purchasing phenomena as a two step process: 
 
 **1. Transaction Process ("Buying")**
 
