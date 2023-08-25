@@ -30,8 +30,19 @@ As long as customer hasn't churned (is "alive), assumptions of the model are:
 The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks to predict the expected average profit of the consumer (i.e their future average order value) by a very similar process. The assumptions of the model are:
 - Order frequency and monetary values (current aov) of customers are not correlated
 - Monetary values of individual transactions are randomly distributed around their average order value
-- Average order values vary across consumers but are constant within consumers through their lifetime
+- Average order values vary from consumer to consumer but are constant for a single consumer through their lifetime
 - Average order values of the entire dataset follow a Gamma distribution
 
   ## Method
-- 
+- Preproocess data to represent inputs of the BTYD model:
+  - Recency: time from first purchase to last purchase (in the chosen time unit - for the current analysis we choose weeks)
+  - Tenure: time from customer's first purchase to the current date
+  - Frequency: number of time periods a customer made a purchase within a given timeframe
+      - For ex, if a customer makes 3 seperate purchases in the same week, frequency still = 1. If a customer makes 3 purchases in 3 seperate weeks, frequency is 3.
+      - For the current analysis, the total time frame is ~ 1.5 years, with a chosen time period of weeks (i.e ~74 weeks)
+      - Time period is chosen at the discretion of the analyst, where contextual knowledge of the data is particularly relevant
+  - Monetary Value (for CLTV): the average order value for a customer per chosen time period (i.e avg weekly order value in our case)
+  
+- Train and validate the BG/NBD Model
+- Fit and assess the Gamma Gamma Model for expected avg order value
+- Calculate and assess retention/churn probabilities 
