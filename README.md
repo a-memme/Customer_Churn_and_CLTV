@@ -37,7 +37,7 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
 - Preproocess data to represent inputs of the BTYD model:
   - Recency: time from first purchase to last purchase (in the chosen time unit - for the current analysis we choose weeks)
   - Tenure: time from customer's first purchase to the current date
-  - Frequency: number of time periods a customer made a  purchase within a given timeframe (i.e the first time a customer makes a purchase isn't included; freq = 0).
+  - Frequency: number of time periods a customer made a REPEAT purchase within a given timeframe (i.e the first time a customer makes a purchase isn't included; freq = 0).
       - For ex, if a customer makes 3 seperate purchases in the same week, frequency is 1. If a customer makes 3 purchases in 3 seperate weeks, frequency is 3.
       - For the current analysis, the total time frame is ~ 1.5 years, with a chosen time period of weeks (i.e ~74 weeks)
           - Time period is chosen at the discretion of the analyst, where contextual knowledge of the data is particularly relevant
@@ -45,7 +45,6 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
   - Monetary Value (for CLTV): the average order value for a customer per chosen time period (i.e avg weekly order value in our case)
   
 - Fit and validate the BG/NBD Model
-    - Modified BG/NBD model is used in our case to account for frequencies of 0.
 - Fit and assess the Gamma Gamma Model for expected avg order value
 - Calculate and assess metrics of interest
     - Retention and Churn probabilities
@@ -58,8 +57,8 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
 The lifetimes module in python offers several built in functions to assess the performance/fit of the model:
 
 #### BG/NBD Model 
-- Comparing our current dataset with an articifically simulated dataset, fit with the same paramaters as our fitted model
-    - Modified BG/NBD is fit to include frequencies of 0, which is also easier to compare to the simulated dataset that also includes 0's.
-![image](https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/d1575af1-1b17-43bd-8408-9e508c37dd1c)
-
-- 
+- Data vs Simulation:
+![image](https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c871c777-6d4d-4a19-8cf9-b0ffed6ab506)
+    -  Artificial dataset is generated with the fitted model's parameters
+    -  the 0 column can be ignored as it is automatically included in the pre-built function, however, we do not include frequencies of 0 in our fit BG/NBD model
+- Train & Test via Calibration & Holdout
