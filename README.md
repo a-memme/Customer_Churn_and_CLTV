@@ -68,3 +68,9 @@ The lifetimes module in python offers several built in functions to assess the p
   
 - **Train & Test via Calibration & Holdout:**
 <img width="495" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/0cf77116-196a-4d9c-891b-79c3b8abbaae">
+
+    - Replicating train/test process via calibration (train) and holdout (test) data splitting
+        - Given a dataset of only 1 year, we only perform this process once, however future iterations would look to create a cross-validating instance via repetition
+    - The model generally overpredicts for fewer instances of re-purchasing behaviour and converges as the numbers increase. Above a frequency of ~16 we see the holdout data divert more instensly away from calibration, however, this is likely due to limited instances of purchases that high (i.e 16 <= frequency <= 31). 
+    - MAE and RMSE values still suggest that overall the model performs quite well, on average over or underpredicting purchasing frequencies of less than half of one freq (0.23).
+-   
