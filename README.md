@@ -95,11 +95,19 @@ Unfortunately there isn't as easy of method to train/validate the Gamma Gamma mo
     - Performance metrics quite good considering the majority of values falling in range of just below $100 to ~$150 (mode = 90).
 
 ### Churn, Retention and CLTV Summary
+#### Summary
+
 <img width="1116" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/b3548e9d-465f-4c71-b35d-a3ffde3e57f3">
 
+    - Large ranges apparent for both retention/churn probabilities and cltv values
+    
+#### Distributions
 <img width="1142" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/7c114eea-f8c1-4c63-b941-9d1b921df7b5">
 <img width="1135" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/9bdba7f2-433d-422d-a36a-589097b880cb">
 
+    - Notable distinctions in the distrbutions of churn and computed cltv values 
+        - Highest frequency of consumers on polarizing ends of churn probabilities, of course indicating a large number of customers to potentially target for incentivization. 
+        - Right-skewed distirbution of cltv despite the high number of high-rentention/low churn probability customers - uncover this phenomena further in the Analysis section below.
 
 
 
