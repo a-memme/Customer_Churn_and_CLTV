@@ -63,6 +63,8 @@ The lifetimes module in python offers several built in functions to assess the p
 
 
     - Artificial dataset is generated with the fitted model's parameters
-    - 0 column can be ignored as it is automatically included in the pre-built function, however, we do not include frequencies of 0 in our fit BG/NBD model
+    - 0 column can be ignored as it is automatically included in generating the simulated dataset but is not included in our set when fitting the model
+        - The modified version of this model (MBG/NBD model) is meant to account for non-repeat purchasers, however, given the innate limited information on their buying history, the retention probability outputted by the model is generally unreliable regardless.
   
 - **Train & Test via Calibration & Holdout:**
+<img width="495" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/0cf77116-196a-4d9c-891b-79c3b8abbaae">
