@@ -82,13 +82,24 @@ The lifetimes module in python offers several built in functions to assess the p
     - As reflected in the previous visual, we see a general positive bias in the model's predictions, converging as we gain more information about the consumer's purchasing behaviour
     - Nevertheless, the model still generally captures captures very important trends effectively, namely:
         - As the time from the customer's last purchase increases, their average frequency of purchasing decreases exponentially 
-            - interesting areas to note may be the 10 week or 20 week periods (pseudo "elbow-method" approach or when avg frequency levels off)
+            - Areas to note may be the 10 week or 20 week periods (pseudo "elbow-method" approach or when avg frequency levels off)
         - Consumers that are active for longer periods of time tend to see higher avg purchasing frequencies.
+            - Areas to note may be ~35 - 45 week marks 
 
 #### Gamma Gamma Submodel 
 Unfortunately there isn't as easy of method to train/validate the Gamma Gamma model's performance, however, we can compare its total average predictions and distribution to our dataset's for at least some level of confidence in its performance:
 
 <img width="1187" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/3ac85fb9-b614-49ea-9f93-3df7c4d061d7">
+
+    - Model capture the general distirbution fairly well 
+    - Performance metrics quite good considering the majority of values falling in range of just below $100 to ~$150 (mode = 90).
+
+### Churn, Retention and CLTV Summary
+<img width="1116" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/b3548e9d-465f-4c71-b35d-a3ffde3e57f3">
+
+<img width="1142" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/7c114eea-f8c1-4c63-b941-9d1b921df7b5">
+<img width="1135" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/9bdba7f2-433d-422d-a36a-589097b880cb">
+
 
 
 
