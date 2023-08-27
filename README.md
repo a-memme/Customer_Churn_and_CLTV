@@ -115,8 +115,10 @@ Unfortunately there isn't as easy of method to train/validate the Gamma Gamma mo
     - Once the consumer makes a purchase, their probability increases, and then continues to decrease again but at a slower rate.
   
 #### Comparing Retention Histories
+
+<img width="492" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/11c03fff-7c80-4697-8ff2-4df68d7f6765">
 <img width="467" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c593c617-8341-454e-89db-fcdab8ab9cdd">
-![Uploading image.png…]()
+
 
 - In the above visual, Figure A represents the consumer with the worst current retention probability, seeing a similar phenomena where the consumer's retention probability decreases at an exponential rate as time goes by without repeat purchase.
 - Figure B represents another consumer with the same recency as Figure A, however, with a much better retention probability - Why?
