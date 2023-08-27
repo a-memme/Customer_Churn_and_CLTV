@@ -32,15 +32,15 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
 - Average order values vary from consumer to consumer but are constant for a single consumer through their lifetime
 - Average order values follow a Gamma distribution for the entire dataset
 
-  ## Method
+## Method
 - Preprocess data to represent inputs of the BTYD model:
   - Recency: time from first purchase to last purchase (in the chosen time unit - for the current analysis we choose weeks)
   - Tenure: time from customer's first purchase to the current date
   - Frequency: number of time periods a customer made a REPEAT purchase within a given timeframe (i.e the first time a customer makes a purchase isn't included where freq = 0).
-      - For ex, if a customer makes 3 seperate purchases in the same week, frequency is 1. If a customer makes 3 purchases in 3 seperate weeks, frequency is 3.
-      - For the current analysis, the total time frame is ~ 1.5 years, with a chosen time period of weeks (i.e ~74 weeks)
+      - For ex. if a customer makes 3 seperate purchases in the same week, frequency = 1. If a customer makes 3 purchases in 3 seperate weeks, frequency = 3.
+      - For the current analysis, the total time frame is ~ 1.5 years, with a chosen time period of weeks (i.e ~ 74 weeks)
           - Time period is chosen at the discretion of the analyst, where contextual knowledge of the data is particularly relevant
-      - Frequencies of 0 mean that a customer has made a purchase, but hasn't had a REPEAT transaction.
+      - Frequencies of 0 = a single purchase customer, meaning they haven't engaged in a repeat transaction.
   - Monetary Value (for CLTV): the average order value of a consumer, dictated by the chosen time interval (i.e avg **weekly** order value in our case)
 - Fit and validate the BG/NBD Model for predicted frequency
 - Fit and assess the Gamma Gamma Model for expected avg order value
@@ -61,8 +61,8 @@ The lifetimes module in python offers several built in functions to assess the p
 
 
     - Artificial dataset is generated with the fitted model's parameters
-    - 0 column can be ignored as it is automatically included in generating the simulated dataset but is not included in our set when fitting the model
-        - The modified version of this model (MBG/NBD model) is meant to account for non-repeat purchasers, however, given the innate limited information on their buying history, the retention probability outputted by the model is generally unreliable regardless.
+    - 0 column can be ignored as it is automatically included in generating the simulated dataset but is not included when fitting the model
+        - The modified version of this model (MBG/NBD model) is meant to account for non-repeat purchasers, however, given the innate limited information on their buying history, the retention probability outputted by the model is generally not very informative.
   
 - **Train & Test via Calibration & Holdout:**
 
@@ -109,7 +109,7 @@ Unfortunately there isn't as easy of method to train/validate the Gamma Gamma mo
         - Highest frequency of consumers on polarizing ends of churn probabilities, of course indicating a large number of customers to potentially target for incentivization. 
         - Right-skewed distirbution of cltv despite the high number of high-rentention/low churn probability customers - uncover this phenomena further in the Analysis section below.
 
-
+## Analysis
 
 
 
