@@ -28,7 +28,7 @@ As long as customer hasn't churned (is "alive), assumptions of the model are:
    - Dropouts vary from consumer to consumer, and follows a Beta distribution with parameters a and β for the entire dataset
 
 ### CLTV - Gamma Gamma Submodel
-The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks to predict the expected average profit of the consumer (i.e their future average order value) with use of the BG/NBD's outputs by a very similar process. The assumptions of the model are:
+The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks to predict the expected average profit of the consumer (i.e their future average order value) with use of the BG/NBD's outputs by a very similar process [^2]. The assumptions of the model are:
 - Order frequency and monetary values (current aov) of customers are not correlated
 - Monetary values of individual transactions are randomly distributed around their average order value
 - Average order values vary from consumer to consumer but are constant for a single consumer through their lifetime
@@ -179,6 +179,7 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
     - Although the size of our dataset is large enough for model creation, ideally we would like to see a longer time frame where a greater number of observations per consumer can be witnessed. As seen in the model above, as frequencies per consumer increase, we see the model converge and become more accurate (freq>= 6). In addition, a longer timeframe would allow for a more robust cross validation process.
 - **Flexibility**
     - Although a potential benefit of BG/NBD is its input simplificty, businesses may WANT to incorporate other demographic data of their consumers into the model to understand profiles of customers likely to have greater retention. This type of flexibility may also be useful in understanding first-time customers
+        - Alternatively, one could look to  others' instances of incorporating non-transactional data into BG/NBD models for inspiration 
 - **Repeat Customer Analysis ONLY**
     - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)* )
         - The modified version of the current model (MBG/NBD) accounts for single transaction customers, however, arguably isn't very informative in understanding their churn given limited information.
@@ -189,5 +190,7 @@ Future analyses may look to:
 - Engage in model maintenance and tuning when more historic purchasing history is available.
 - Explore alternative method or model combination approaches in understanding single-transaction consumer behaviour, retention probability and lifetime value, and relationships differ from repeat customer behaviour.
 
-  ## References 
-- [^1]: Fader, Peter & Hardie, Bruce & Lee, Ka. (2005). “Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model. Marketing Science. 24. 275-284. 10.1287/mksc.1040.0098.
+## References
+[^1]: Fader, Peter & Hardie, Bruce & Lee, Ka. (2005). “Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model. Marketing Science. 24. 275-284. 10.1287/mksc.1040.0098.
+[^2]: Hardie, B.G. The Gamma-Gamma Model of Monetary Value.
+[^3]: van Oest, Rutger and Knox, George, Extending the BG/NBD: A Simple Model of Purchases and Complaints (November 16, 2010). International Journal of Research in Marketing, Forthcoming, Available at SSRN: https://ssrn.com/abstract=1711186
