@@ -180,9 +180,11 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
 - **Flexibility**
     - Although a potential benefit of BG/NBD is its input simplificty, businesses may WANT to incorporate other demographic data of their consumers into the model to understand profiles of customers likely to have greater retention. This type of flexibility may also be useful in understanding first-time customers
 - **Repeat Customer Analysis ONLY**
-    - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)*
+    - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)* )
         - The modified version of the current model (MBG/NBD) accounts for single transaction customers, however, arguably isn't very informative in understanding their churn given limited information.
 
-  ### Future Outlook
-  Future analyses may look to:
-  - 
+### Future Outlook
+Future analyses may look to:
+- Incorporate the power of combining other models to understand our consumer base better - i.e potentially looking for relationships/correlations of demographic data mapped on top of retention and cltv outputs
+- Engage in model maintenance and tuning when more historic purchasing history is available.
+- Explore alternative method or model combination approaches in understanding single-transaction consumer behaviour, retention probability and lifetime value, and relationships differ from repeat customer behaviour.
