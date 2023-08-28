@@ -179,7 +179,7 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
     - Although the size of our dataset is large enough for model creation, ideally we would like to see a longer time frame where a greater number of observations per consumer can be witnessed. As seen in the model above, as frequencies per consumer increase, we see the model converge and become more accurate (freq>= 6). In addition, a longer timeframe would allow for a more robust cross validation process.
 - **Flexibility**
     - Although a potential benefit of BG/NBD is its input simplificty, businesses may WANT to incorporate other demographic data of their consumers into the model to understand profiles of customers likely to have greater retention. This type of flexibility may also be useful in understanding first-time customers
-        - Alternatively, one could look to  others' instances of incorporating non-transactional data into BG/NBD models for inspiration 
+        - Alternatively, one could look to  others' instances of incorporating non-transactional data into BG/NBD models for inspiration [^3].
 - **Repeat Customer Analysis ONLY**
     - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)* )
         - The modified version of the current model (MBG/NBD) accounts for single transaction customers, however, arguably isn't very informative in understanding their churn given limited information.
@@ -193,4 +193,4 @@ Future analyses may look to:
 ## References
 [^1]: Fader, Peter & Hardie, Bruce & Lee, Ka. (2005). “Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model. Marketing Science. 24. 275-284. 10.1287/mksc.1040.0098.
 [^2]: Hardie, B.G. The Gamma-Gamma Model of Monetary Value.
-[^3]: van Oest, Rutger and Knox, George, Extending the BG/NBD: A Simple Model of Purchases and Complaints (November 16, 2010). International Journal of Research in Marketing, Forthcoming, Available at SSRN: https://ssrn.com/abstract=1711186
+[^3]: Van Oest, Rutger and Knox, George, Extending the BG/NBD: A Simple Model of Purchases and Complaints (November 16, 2010). International Journal of Research in Marketing, Forthcoming, Available at SSRN: https://ssrn.com/abstract=1711186
