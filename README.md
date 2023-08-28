@@ -38,8 +38,8 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
   - **Tenure:** time from customer's first purchase to the current date
   - **Frequency:** number of time periods a customer made a REPEAT purchase within a given timeframe (i.e the first time a customer makes a purchase = 0).
       - For ex. if a customer makes 3 seperate purchases in the same week, frequency = 1. If a customer makes 3 purchases in 3 seperate weeks, frequency = 3.
-      - For the current analysis, the total time frame is ~ 1.5 years, with a chosen time period of weeks (i.e ~ 74 weeks)
-          - Time period is chosen at the discretion of the analyst, where contextual knowledge of the data is particularly relevant
+      - For the current analysis, the total time frame is ~ 1.5 years, with a chosen time interval of weeks (i.e ~ 74 weeks)
+          - Time interval is chosen at the discretion of the analyst, where contextual knowledge of the data is particularly relevant
       - Frequencies of 0 = a single purchase customer, meaning they haven't engaged in a repeat transaction.
   - **Monetary Value (for CLTV):** the average order value of a consumer, dictated by the chosen time interval (weekly in our case)
 - Fit and validate the BG/NBD Model for predicted frequency
@@ -133,7 +133,7 @@ Through validation and exploration of our model, we can now perform some simple 
   
 <img width="692" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/67d332c0-84a5-456b-9d02-3ef0721d3a70">
 
-    - In line with our representation of churn history, consumers with best retention/churning probabilities all have long histories of purchase (recency), have purchased recently (T - recency --> usually within the past 0-2 weeks) and have purchased frequently through that life (frequency).
+    - In line with our representation of churn history, consumers with best retention/churning probabilities all have long histories of purchase (recency), have purchased recently (T - recency --> usually within the past 0-1 weeks) and have purchased frequently through that life (frequency).
         - This gives us further confirmation in the model's outputs regarding retention
     - As we can see, customers with the lowest (best) probability of churning aren't necessarily considered the most "valuable" from a monetary sense (CLTV). 
     - Consumers in this distinction may be appropriate candidates for incentivization via rewards and/or strategical upselling given their high likihood of repurchase and varying aov/predicted lifetime values.
@@ -161,3 +161,4 @@ In contrast, we most likely will look to identify consumers who have a higher li
 
 <img width="1197" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/dccc5077-d292-4bae-8031-e4d16728ec4b">
 
+## Conclusion
