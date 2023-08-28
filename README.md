@@ -75,6 +75,8 @@ The lifetimes module in python offers several built in functions to assess the p
         - Given more data at these points, we'd expect averages to converge toward the general pattern.
     - MAE and RMSE values still suggest that model's performace is acceptable, over/under predicting frequency behaviour by a value of < 1 on average (MAE = 0.76).
 
+<img width="873" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c08afff7-002a-46de-a369-25b5ee9b3607">
+
 - **Calibration/Holdout - Time Since Last Purchase & Consumer Age**
 
 <img width="476" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/7217de84-a914-4597-8d29-92e4e71e19c5">
@@ -113,7 +115,7 @@ Unfortunately there isn't as easy of method to train/validate the Gamma Gamma mo
 
 - In the above visual we can see the retention history for the consumer with the best retention probability calculated by the model.
 - As witnessed, the retention probability begins to decrease at an exponential rate the longer the consumer goes without purchasing
-- Once the consumer makes a purchase, their retention probability increases, and then continues to decrease again but at a slower rate.
+- Once the consumer makes a purchase, their retention probability increases, and then continues to decrease once again, but at a slower rate.
   
 #### Comparing Retention Histories
 
@@ -136,13 +138,13 @@ Through validation and exploration of our model, we can now perform some simple 
     - In line with our representation of churn history, consumers with best retention/churning probabilities all have long histories of purchase (recency), have purchased recently (T - recency --> usually within the past 0-2 weeks) and have purchased frequently through that life (frequency).
         - This gives us further confirmation in the model's outputs regarding retention
     - As we can see, customers with the lowest (best) probability of churning aren't necessarily considered the most "valuable" from a monetary sense (CLTV). 
-    - ** Said customers would be good candidates for incentivization (rewards?) and/or strategical upselling given their high likihood of repurchase and varying aov/monetary values.
+    - Consumers in this distinction may be appropriate candidates for incentivization via rewards and/or strategical upselling given their high likihood of repurchase and varying aov/predicted lifetime values.
 
 - **Most Valuable**
 <img width="1152" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/2cf2ede0-d430-4f04-8f39-b48ff74aa26d">
 
     - When we segment customers by churn probabilities, we can filter for the top quadrant and understand who our considered the most valuable based on our yearly prediction of cltv.
-    - Consumers in this distinction could particularly appropriate candidates for rewards targeting and other marketing techniques revolved around nurturing customer relationships.
+    - Consumers in this distinction could be particularly appropriate candidates for rewards targeting and other marketing techniques revolved around nurturing customer relationships.
  
 ### High Probability "Churners"
 
