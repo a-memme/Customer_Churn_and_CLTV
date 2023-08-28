@@ -66,12 +66,13 @@ The lifetimes module in python offers several built in functions to assess the p
   
 - **Train & Test via Calibration & Holdout:**
 
-<img width="473" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c36be948-0712-4d47-a387-b2605183d93e">
+<img width="491" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c33bbeef-b90b-4638-b249-3577a8411420">
 
     - Replicating train/test process via calibration (train) and holdout (test) data splitting
         - Given a dataset of only 1 year, we only perform this process once, however future iterations would look to create a cross-validating instance via repetition
-    - Model generally overpredicts for fewer instances of re-purchasing behaviour and converges as the numbers increase (up to ~16).
-        - Freq > ~16 we see the holdout data divert more instensly away from calibration, however, this could likely be due to limited instances of purchasing behaviour > 16.
+    - Model generally overpredicts for fewer instances of re-purchasing behaviour and converges as the numbers increase (up to ~14).
+        - As shown below, frequencies > 14 see significantly fewer instances (<= 7 instances) which would explain why the holdout data would diverge at this point. 
+        - Given more data at these points, we'd expect averages to converge toward the general pattern.
     - MAE and RMSE values still suggest that model's performace is acceptable, over/under predicting frequency behaviour by a value of < 1 on average (MAE = 0.76).
 
 - **Calibration/Holdout - Time Since Last Purchase & Consumer Age**
