@@ -188,7 +188,7 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
 Future analyses may look to:
 - Incorporate the power of combining other models to understand our consumer base better - i.e potentially looking for relationships/correlations of demographic data mapped on top of retention and cltv outputs
 - Engage in model maintenance and tuning when more historic purchasing history is available.
-- Explore alternative method or model combination approaches in understanding single-transaction consumer behaviour, retention probability and lifetime value, and relationships differ from repeat customer behaviour.
+- Explore alternative methods or combined model approaches in understanding single-transaction consumer behaviour, retention probability, and lifetime value, and explore how said relationships may differ vs repeat customer behaviour.
 
 ## References
 [^1]: Fader, Peter & Hardie, Bruce & Lee, Ka. (2005). “Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model. Marketing Science. 24. 275-284. 10.1287/mksc.1040.0098. Available at https://www.brucehardie.com/papers/bgnbd_2004-04-20.pdf
