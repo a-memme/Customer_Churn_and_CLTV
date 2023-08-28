@@ -191,6 +191,6 @@ Future analyses may look to:
 - Explore alternative method or model combination approaches in understanding single-transaction consumer behaviour, retention probability and lifetime value, and relationships differ from repeat customer behaviour.
 
 ## References
-[^1]: Fader, Peter & Hardie, Bruce & Lee, Ka. (2005). “Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model. Marketing Science. 24. 275-284. 10.1287/mksc.1040.0098.
-[^2]: Hardie, B.G. The Gamma-Gamma Model of Monetary Value.
+[^1]: Fader, Peter & Hardie, Bruce & Lee, Ka. (2005). “Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model. Marketing Science. 24. 275-284. 10.1287/mksc.1040.0098. Available at https://www.brucehardie.com/papers/bgnbd_2004-04-20.pdf
+[^2]: Hardie, B.G. The Gamma-Gamma Model of Monetary Value. Available at https://www.brucehardie.com/notes/025/gamma_gamma.pdf 
 [^3]: Van Oest, Rutger and Knox, George, Extending the BG/NBD: A Simple Model of Purchases and Complaints (November 16, 2010). International Journal of Research in Marketing, Forthcoming, Available at SSRN: https://ssrn.com/abstract=1711186
