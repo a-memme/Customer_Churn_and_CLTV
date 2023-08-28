@@ -3,7 +3,7 @@
 
 ## Overview
 ### Purpose
-Churn, retention and lifetime value are all trigger terms thrown around constantly in the professional world  - being able to accurately identify, calculate and understand these metrics are critical to any business looking to understand their consumer base and maximize their potential.
+Churn, retention and lifetime value are all trigger terms thrown around constantly in the professional world  - amidst the chatter, what's certain is being able to accurately identify, calculate and understand these metrics are critical to any business looking to understand their consumer base and maximize their potential.
 
 Although common analytic approaches such as clustering or classification can be effective in segmenting or predicting churn respectively, one key issue that often exists is the censored data present - that is, the customer's purchasing lifetime is typically unfinished, making the application of this classification (whether a customer has churned or not) very problematic. This is particularly relevant in non-contractual/non-subscription based business setting where a consumer can decide to "cut ties" at any moment, so any distinguishing feature of churn needed in order to train a model would essentially be arbitrary (i.e a customer that just made a purchase yesterday may churn tomorrow, and a customer who hasn't made a purchase in 2 years may purchase again tomorrow).
 
@@ -59,21 +59,19 @@ The lifetimes module in python offers several built in functions to assess the p
 
 ![image](https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c871c777-6d4d-4a19-8cf9-b0ffed6ab506) 
 
-
     - Artificial dataset is generated with the fitted model's parameters
     - 0 column can be ignored as it is automatically included in generating the simulated dataset but is not included when fitting the model
-        - The modified version of this model (MBG/NBD model) is meant to account for non-repeat purchasers, however, given the innate limited information on their buying history, the retention probability outputted by the model is generally not very informative.
   
 - **Train & Test via Calibration & Holdout:**
 
 <img width="491" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c33bbeef-b90b-4638-b249-3577a8411420">
 
     - Replicating train/test process via calibration (train) and holdout (test) data splitting
-        - Given a dataset of only 1 year, we only perform this process once, however future iterations would look to create a cross-validating instance via repetition
-    - Model generally overpredicts for fewer instances of re-purchasing behaviour and converges as the numbers increase (up to ~14).
-        - As shown below, frequencies > 14 see significantly fewer instances (<= 7 instances) which would explain why the holdout data would diverge at this point. 
-        - Given more data at these points, we'd expect averages to converge toward the general pattern.
-    - MAE and RMSE values still suggest that model's performace is acceptable, over/under predicting frequency behaviour by a value of < 1 on average (MAE = 0.76).
+        - Given a dataset of only 1 year, we only perform this process once, however future iterations would look to create a cross-validating instance 
+    - Model generally overpredicts for fewer instances of repurchasing behaviour and converges as frequency values increase (up to ~14).
+        - As shown below, frequencies > 14 see significantly fewer instances (<= 7 instances) which would explain why the holdout data may drastically diverge at this point. 
+        - Given more data at these intervals, we'd expect averages to converge toward the general pattern.
+    - MAE and RMSE values still suggest that model's performace is acceptable, with +/- predictions < 1 on average (MAE = 0.76).
 
 <img width="873" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c08afff7-002a-46de-a369-25b5ee9b3607">
 
@@ -82,19 +80,19 @@ The lifetimes module in python offers several built in functions to assess the p
 <img width="476" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/7217de84-a914-4597-8d29-92e4e71e19c5">
 <img width="497" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/bccbf06e-48dd-4dcb-82ea-50c109490c5d">
 
-    - General positive bias in the model's predictions as reflected previously, however at the least, still capturing very important trends in the data, namely that:
+    - General positive bias in the model's predictions as reflected previously, however at the least, still captures very important trends in the data, namely that:
         - As the time from the customer's last purchase increases, their average frequency of purchasing decreases exponentially 
             - Areas to note may be the 10 week or 20 week periods (pseudo "elbow-method" approach or when avg frequency levels off)
         - Consumers that are active for longer periods of time tend to see higher avg purchasing frequencies.
             - Areas to note may be ~ 35 - 45 week marks 
 
 #### Gamma Gamma Submodel 
-Unfortunately there isn't as easy of method to train/validate the Gamma Gamma model's performance, however, we can compare its total average predictions and distribution to our dataset's for some level of confidence in its performance:
+Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma model's performance, however, we can compare its total average predictions and distribution to our dataset's for some level of confidence in performance:
 
 <img width="1187" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/3ac85fb9-b614-49ea-9f93-3df7c4d061d7">
 
-    - Model capture the general distribution fairly well 
-    - Good MAE/RMSE values considering the majority of monetary values fall in range of $100 to ~$150 (mode = 90).
+    - Model captures the general distribution fairly well 
+    - Good MAE/RMSE values considering the majority of monetary values fall within range of $100 to ~$150 (mode = 90).
 
 ### Churn, Retention and CLTV Summary
 #### Summary
@@ -107,7 +105,7 @@ Unfortunately there isn't as easy of method to train/validate the Gamma Gamma mo
 
     - Notable distinctions in the distributions of churn and cltv values 
         - Highest frequency of consumers on polarizing ends of churn probabilities, indicating a potentially large base of customers to action around.
-        - Right-skewed distribution of cltv despite the high number of high-rentention/low churn probability customers - explore this relationship further in the Analysis section below.
+        - Right-skewed distribution in cltv predictions despite the high number of high-rentention/low churn probability customers - explore this relationship further in the Analysis section below.
 
 ### Probability "Alive" - Analyzing Retention Life 
 #### Highest Retention:
