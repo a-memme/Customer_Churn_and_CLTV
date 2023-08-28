@@ -157,17 +157,32 @@ Through validation and exploration of our model, we can now perform some simple 
 In contrast, we most likely will look to identify consumers who have a higher liklihood of churning, but possess some characteristic leading us to believe that some form of incentivization or target marketing may elicit repurchase once again. 
 
 - One way in which we can identify said consumers is use our churning distribution knowledge and filter for the most frequently occuring high churn probability groups (p>=0.8), and sort based on predicted lifetime value (most valuable to least):
-    -  Here, we can identify consumers in the lower 2 churning quadrants and look to understand who is the most valuable, specifics on their overall purchasing behaviour, and map out the appropriate amount of actionable effort against the expected gain or profit
+    -  Here, we can identify consumers in the lower 2 churning segments and look to understand who is the most valuable, specifics on their overall purchasing behaviour, and map out the appropriate amount of actionable effort against the expected gain or profit in "re-igniting" their purchasing behaviour.
+    -  Futhermore, said customers could be good candidates for feedback surveying.
 
 <img width="1190" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/11260e3c-8ae0-4b75-9bff-d0d921c7e265">
 
-- More simply, we can also filter for a lower churning segment (C in this case) and compare and contrast cltv segments to simply visualize who to target (for ex. we may want to specifically look at targeting C level churners that have an A level lifetime value in this case):
+- More simply, we can also filter for a lower churning segment (C in this case) and compare and contrast cltv segments to simply visualize who to target (for ex. we may want to specifically look at targeting C level churners that have an A level predicted lifetime value in this case):
 
   <img width="1194" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/d9e2f57e-fb05-4ab5-a058-ca414e7b2b9c">
 
 - Finally, we could look to be more proactive by identifying consumers at an earlier stage of the process who are in more of a "potential risk" category, and are more appropriate candidates for simple probing/reminder styles of targeting to help stimulate repurchase at a time where we typically see frequency and/or retention drop off.
-    - One way we could assess this group is to leverage our understanding of customer age and/or time since last purchase to filter through our data. Recall that between 5 to 20 weeks since last purchase is where we saw the largest drop off in average purchasing frequency. Below, we use this information to filter through our data and sort by churn probability:
+    - One way we could assess this group is to leverage our understanding of customer age and/or time since last purchase to filter through our data. Recall that between 5 to 15 weeks since last purchase is where we saw the largest drop off in average purchasing frequency. Below, we use this information to filter through our data and sort by churn probability:
 
 <img width="1197" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/dccc5077-d292-4bae-8031-e4d16728ec4b">
 
 ## Conclusion
+In the above analysis, we leverage Buy Till You Die probabilistic models to calculate customer retention and churn, and ultimately, predict ltv at a duration of our choosing. By expressing churn in probabilistic means, we are able to represent the dynamic nature of retention and lifetime value more appropriately, accounting for the innate censored-nature of the data at hand. Furthermore, we can benefit from some typical merits of the BG/NBD model, namely speedy optimization, easy deployment and rich interpretability as exemplified above. 
+
+### Limitations 
+- **Long Purchasing History**
+    - Although the size of our dataset is large enough for model creation, ideally we would like to see a longer time frame where a greater number of observations per consumer can be witnessed. As seen in the model above, as frequencies per consumer increase, we see the model converge and become more accurate (freq>= 6). In addition, a longer timeframe would allow for a more robust cross validation process.
+- **Flexibility**
+    - Although a potential benefit of BG/NBD is its input simplificty, businesses may WANT to incorporate other demographic data of their consumers into the model to understand profiles of customers likely to have greater retention. This type of flexibility may also be useful in understanding first-time customers
+- **Repeat Customer Analysis ONLY**
+    - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)*
+        - The modified version of the current model (MBG/NBD) accounts for single transaction customers, however, arguably isn't very informative in understanding their churn given limited information.
+
+  ### Future Outlook
+  Future analyses may look to:
+  - 
