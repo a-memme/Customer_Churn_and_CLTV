@@ -119,7 +119,12 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
   
 #### Comparing Retention Histories
 
+##### Figure A
+
 <img width="492" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/11c03fff-7c80-4697-8ff2-4df68d7f6765">
+
+##### Figure B
+
 <img width="467" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/c593c617-8341-454e-89db-fcdab8ab9cdd">
 
 
