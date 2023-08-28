@@ -147,5 +147,11 @@ Through validation and exploration of our model, we can now perform some simple 
     - Consumers in this distinction could be particularly appropriate candidates for rewards targeting and other marketing techniques revolved around nurturing customer relationships.
  
 ### High Probability "Churners"
+In contrast, we most likely will look to identify consumers who have a higher liklihood of churning, but possess some characteristic leading us to believe that some form of incentivization or target marketing may elicit repurchase once again. 
+
+- One way in which we can identify said consumers is use our churning distribution knowledge and filter for the most frequently occuring high churn probability groups (p>=0.8), and sort based on predicted lifetime value (most valuable to least):
+    -  Here, we can identify consumers in the lower 2 churning quadrants and look to understand who is the most valuable, specifics on their overall purchasing behaviour, and map out the appropriate amount of actionable effort against the expected gain or profit:
+
+<img width="1145" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/a37e7788-3f22-4b80-8bcf-f183430c6bb7">
 
 
