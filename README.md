@@ -128,6 +128,7 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
     - For the model's calculation, its not just the sheer volume of frequency/recency length that is important, but also the pattern of frequency. In this case, a frequency pattern that is more spread out sees a slower decline in retention probability vs one that breaks its typical pattern, despite having a larger frequency value or a more frequent purchasing pattern prior.
  
 ## Analysis
+*See cells 45-50 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
 Through validation and exploration of our model, we can now perform some simple segmenting/sorting tasks to identify consumers of various value characteristics.
 
 ### High Valued Customers
