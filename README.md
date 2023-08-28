@@ -109,7 +109,7 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
         - Highest frequency of consumers on polarizing ends of churn probabilities, indicating a potentially large base of customers to action around.
         - Right-skewed distribution in cltv predictions despite the high number of high-rentention/low churn probability customers - explore this relationship further in the Analysis section below.
 
-### Probability "Alive" - Analyzing Retention Life 
+### Probability "Alive" - Analyzing Individual Retention Life 
 #### Highest Retention:
 <img width="468" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/fff4d10d-2e0f-43ce-a8e1-1d98623d8617">
 
