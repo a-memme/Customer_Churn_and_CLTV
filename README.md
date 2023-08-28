@@ -56,7 +56,7 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
 ### Model Fitting & Validation 
 *See cells 9-43 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
 
-The lifetimes module in python offers several built in functions to assess the performance/fit of the model:
+The lifetimes module in python offers several built in functions to assess the performance/fit of the model. See their documentation here: [Lifetimes Documentation](https://lifetimes.readthedocs.io/en/latest/Quickstart.html)
 
 #### BG/NBD Model 
 - **Data vs Simulation:**
