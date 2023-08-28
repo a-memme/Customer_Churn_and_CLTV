@@ -112,7 +112,7 @@ Unfortunately there isn't as easy of method to train/validate the Gamma Gamma mo
 
 - In the above visual we can see the retention history for the consumer with the best retention probability calculated by the model.
 - As witnessed, the retention probability begins to decrease at an exponential rate the longer the consumer goes without purchasing
-- Once the consumer makes a purchase, their probability increases, and then continues to decrease again but at a slower rate.
+- Once the consumer makes a purchase, their retention probability increases, and then continues to decrease again but at a slower rate.
   
 #### Comparing Retention Histories
 
@@ -123,10 +123,10 @@ Unfortunately there isn't as easy of method to train/validate the Gamma Gamma mo
 - In the above visual, Figure A represents the consumer with the worst current retention probability, seeing a similar phenomena where the consumer's retention probability decreases at an exponential rate as time goes by without repeat purchase.
 - Figure B represents another consumer with the same recency and tenure as Figure A, however, with a much better retention probability despite having a lower  frequency of purchase - Why?
     - For the model's calculation, its not just the sheer volume of frequency/recency length that is important, but also the pattern of frequency. In this case, a frequency pattern that is more spread out sees a slower decline in retention probability vs one that breaks its typical pattern, despite having a larger frequency value or a more frequent purchasing pattern prior.
-    - This is an oversimplification of how the model operates, but gives us a general idea of which areas are valued in calculation.
  
 ## Analysis
 Through validation and exploration of our model, we can now perform some simple segmenting/sorting tasks to identify consumers of various value characteristics.
+
 ### High Valued Customers
 - **Best Retention / Churn**
   
@@ -135,9 +135,14 @@ Through validation and exploration of our model, we can now perform some simple 
     - In line with our representation of churn history, consumers with best retention/churning probabilities all have long histories of purchase (recency), have purchased recently (T - recency --> usually within the past 0-2 weeks) and have purchased frequently through that life (frequency).
         - This gives us further confirmation in the model's outputs regarding retention
     - As we can see, customers with the lowest (best) probability of churning aren't necessarily considered the most "valuable" from a monetary sense (CLTV). 
-    - ** Said customers would be good customers for incentivization (rewards?) and strategical upselling given their high likihood of repurchase and varying moentary values.
+    - ** Said customers would be good candidates for incentivization (rewards?) and/or strategical upselling given their high likihood of repurchase and varying aov/monetary values.
 
 - **Most Valuable**
 <img width="1152" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/2cf2ede0-d430-4f04-8f39-b48ff74aa26d">
+
+    - When we segment customers by churn probabilities, we can filter for the top quadrant and understand who our considered the most valuable based on our yearly prediction of cltv.
+    - Consumers in this distinction could particularly appropriate candidates for rewards targeting and other marketing techniques revolved around nurturing customer relationships.
+ 
+### High Probability "Churners"
 
 
