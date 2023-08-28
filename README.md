@@ -12,7 +12,7 @@ For the current analysis, we leverage "Buy 'Till You Die' probabilistic models t
 The above approach allows us to make rather accurate predictions with minimal buying behaviour data, and provides a more realistic framework in expressing churn by probabilistic means rather than categorical (yes/no boolean). Given this, we are left with a set of rich information that is very easily interpretable for segmenting, targeting and actioning around our consumer base.
 
 ### Purchasing Behaviour & Churn - BG/NBD Model
-The BTYD model of choice in our analysis is the popularly-used Beta Geometric/Negative Binomial Distribution model - a revised and improved version of the Pareto/NBD model developed in 1987.
+The BTYD model of choice in our analysis is the popularly-used Beta Geometric/Negative Binomial Distribution model - a revised and improved version of the Pareto/NBD model developed in 1987.[^1]
 
 Essentially, the model looks to predict future transactions of each individual customer by taking into account their individual purchasing history in reference to the general customer pattern. It treats purchasing phenomena as a two step process: 
 
@@ -183,6 +183,8 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
     - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)* )
         - The modified version of the current model (MBG/NBD) accounts for single transaction customers, however, arguably isn't very informative in understanding their churn given limited information.
 
+## References 
+- [^1] Fader, Peter & Hardie, Bruce & Lee, Ka. (2005). “Counting Your Customers” the Easy Way: An Alternative to the Pareto/NBD Model. Marketing Science. 24. 275-284. 10.1287/mksc.1040.0098.
 ### Future Outlook
 Future analyses may look to:
 - Incorporate the power of combining other models to understand our consumer base better - i.e potentially looking for relationships/correlations of demographic data mapped on top of retention and cltv outputs
