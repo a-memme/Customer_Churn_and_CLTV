@@ -129,6 +129,7 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
  
 ## Analysis
 *See cells 45-50 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
+
 Through validation and exploration of our model, we can now perform some simple segmenting/sorting tasks to identify consumers of various value characteristics.
 
 ### High Valued Customers
