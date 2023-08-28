@@ -143,15 +143,23 @@ Through validation and exploration of our model, we can now perform some simple 
 - **Most Valuable**
 <img width="1152" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/2cf2ede0-d430-4f04-8f39-b48ff74aa26d">
 
-    - When we segment customers by churn probabilities, we can filter for the top quadrant and understand who our considered the most valuable based on our yearly prediction of cltv.
+    - When we segment customers by churn probabilities, we can filter for the top quadrant and understand who are considered the most valuable based on our yearly prediction of cltv.
     - Consumers in this distinction could be particularly appropriate candidates for rewards targeting and other marketing techniques revolved around nurturing customer relationships.
  
 ### High Probability "Churners"
 In contrast, we most likely will look to identify consumers who have a higher liklihood of churning, but possess some characteristic leading us to believe that some form of incentivization or target marketing may elicit repurchase once again. 
 
 - One way in which we can identify said consumers is use our churning distribution knowledge and filter for the most frequently occuring high churn probability groups (p>=0.8), and sort based on predicted lifetime value (most valuable to least):
-    -  Here, we can identify consumers in the lower 2 churning quadrants and look to understand who is the most valuable, specifics on their overall purchasing behaviour, and map out the appropriate amount of actionable effort against the expected gain or profit:
+    -  Here, we can identify consumers in the lower 2 churning quadrants and look to understand who is the most valuable, specifics on their overall purchasing behaviour, and map out the appropriate amount of actionable effort against the expected gain or profit
 
-<img width="1145" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/a37e7788-3f22-4b80-8bcf-f183430c6bb7">
+<img width="1190" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/11260e3c-8ae0-4b75-9bff-d0d921c7e265">
 
+- More simply, we can also filter for a lower churning segment (C in this case) and compare and contrast cltv segments to simply visualize who to target (for ex. we may want to specifically look at targeting C level churners that have an A level lifetime value in this case):
+
+  <img width="1194" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/d9e2f57e-fb05-4ab5-a058-ca414e7b2b9c">
+
+- Finally, we could look to be more proactive by identifying consumers at an earlier stage of the process who are in more of a "potential risk" category, and are more appropriate candidates for simple probing/reminder styles of targeting to help stimulate repurchase at a time where we typically see frequency and/or retention drop off.
+    - One way we could assess this group is to leverage our understanding of customer age and/or time since last purchase to filter through our data. Recall that between 5 to 20 weeks since last purchase is where we saw the largest drop off in average purchasing frequency. Below, we use this information to filter through our data and sort by churn probability:
+
+<img width="1197" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/dccc5077-d292-4bae-8031-e4d16728ec4b">
 
