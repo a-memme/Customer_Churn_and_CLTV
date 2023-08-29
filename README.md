@@ -130,7 +130,7 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
 
 - In the above visual, Figure A represents the consumer with the worst current retention probability, seeing a similar phenomena where the consumer's retention probability decreases at an exponential rate as time goes by without repeat purchase.
 - Figure B represents another consumer with the same recency and tenure as Figure A, however, with a much better retention probability despite having a lower  frequency of purchase - Why?
-    - For the model's calculation, its not just the sheer volume of frequency/recency length that is important, but also the pattern of frequency. In this case, a frequency pattern that is more spread out sees a slower decline in retention probability vs one that breaks its typical pattern, despite having a larger frequency value or a more frequent purchasing pattern prior.
+    - For the model's calculation, its not just the sheer volume of frequency and/or recency length that is important, but also the pattern of frequency. In this case, a frequency pattern that is more spread out sees a slower decline in retention vs one that is much more frequent but deviates substantially from its typical pattern.
  
 ## Analysis
 *See cells 45-50 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
