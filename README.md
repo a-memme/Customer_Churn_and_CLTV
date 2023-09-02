@@ -129,8 +129,8 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
 
 
 - In the above visual, Figure A represents the consumer with the worst current retention probability, seeing a similar phenomena where the consumer's retention probability decreases at an exponential rate as time goes by without repeat purchase.
-- Figure B represents another consumer with the same recency and tenure as Figure A, however, with a much better retention probability despite having a lower  frequency of purchase - Why?
-    - For the model's calculation, its not just the sheer volume of frequency and/or recency length that is important, but also the pattern of frequency. In this case, a frequency pattern that is more spread out sees a slower decline in retention vs one that is much more frequent but deviates substantially from its typical pattern.
+- Figure B represents another consumer with the same recency and tenure as Figure A, however, with a much better retention probability despite having a lower frequency of purchase - Why?
+    - For the model's calculation, purchasing pattern is also very important in determining probability of retention - i.e although Figure A had a much larger frequency v Figure B within the same period T, they deviated quite substantially from their typical purchasing pattern in comparison, and thus, see retention probability drop at a faster pace.
  
 ## Analysis
 *See cells 45-50 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
@@ -182,7 +182,6 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
         - Alternatively, one could look to  others' instances of incorporating non-transactional data into BG/NBD models for inspiration [^3].
 - **Repeat Customer Analysis ONLY**
     - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)* )
-        - The modified version of the current model (MBG/NBD) accounts for single transaction customers, however, arguably isn't very informative in understanding their churn given limited information.
 
 ### Future Outlook
 Future analyses may look to:
