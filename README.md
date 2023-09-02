@@ -179,14 +179,14 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
 - **Long Purchasing History**
     - Although the size of our dataset is large enough for model creation, ideally we would like to see a longer time frame where a greater number of observations per consumer can be witnessed. As seen in the model above, as frequencies per consumer increase, we see the model converge and become more accurate (freq>= 6). In addition, a longer timeframe would allow for a more robust cross validation process.
 - **Flexibility**
-    - Although a potential benefit of BG/NBD is its input simplificty, businesses may WANT to incorporate other demographic data of their consumers into the model to understand profiles of customers likely to have greater retention. This type of flexibility may also be useful in understanding first-time customers
+    - Although a potential benefit of BG/NBD is its input simplicity, businesses may WANT to incorporate consumer demographic data into the model to understand profiles of customers likely to have greater retention. This type of flexibility may also be useful in understanding first-time customers
         - Alternatively, one could look to  others' instances of incorporating non-transactional data into BG/NBD models for inspiration [^3].
 - **Repeat Customer Analysis ONLY**
     - Our analysis only looks at REPEAT customers and ignores those that have only made single purchases, which make up an extremely large majority of the total customer base (in our case 74% of our entire consumer base -- *see cells 6-7 in  [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb)* )
 
 ### Future Outlook
 Future analyses may look to:
-- Incorporate the power of combining other models to understand our consumer base better - i.e potentially looking for relationships/correlations of demographic data mapped on top of retention and cltv outputs
+- Incorporate the power of combining other models to greater understand our consumer base - for example, mapping demographic/taxonomical data to our model's outputs and performing correlation analysis.
 - Engage in model maintenance and tuning when more historic purchasing history is available.
 - Explore alternative methods or combined model approaches in understanding single-transaction consumer behaviour, retention probability, and lifetime value, and explore how said relationships may differ vs repeat customer behaviour.
 
