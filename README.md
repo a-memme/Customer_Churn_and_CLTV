@@ -131,6 +131,7 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
 - In the above visual, Figure A represents the consumer with the worst current retention probability, seeing a similar phenomena where the consumer's retention probability decreases at an exponential rate as time goes by without repeat purchase.
 - Figure B represents another consumer with the same recency and tenure as Figure A, however, with a much better retention probability despite having a lower frequency of purchase - Why?
     - For the model's calculation, purchasing pattern is also very important in determining probability of retention - i.e although Figure A had a much larger frequency v Figure B within the same period T, they deviated quite substantially from their typical purchasing pattern in comparison, and thus, see retention probability drop at a faster pace.
+- Figure A is a perfect example of a missed opportunity - here we had a frequent and consistent repeat consumer with great retention through a large area of their purchasing life, only to see that retention drop off drastically. At any moment from >= week 45, there were several opportunities to take action with aim to prevent this drop off given the information at hand.
  
 ## Analysis
 *See cells 45-50 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
