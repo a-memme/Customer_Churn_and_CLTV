@@ -42,8 +42,7 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
       - For ex. if a customer makes 3 seperate purchases in the same week, frequency = 1. If a customer makes 3 purchases in 3 seperate weeks, frequency = 3.
       - For the current analysis, the total time frame is ~ 1.5 years, with a chosen time interval of weeks (i.e ~ 74 weeks)
           - Time interval is chosen at the discretion of the analyst, where contextual knowledge of the data is particularly relevant
-      - Frequencies of 0 = a single purchase customer, meaning they haven't engaged in a repeat transaction.
-  - **Monetary Value (for CLTV):** the average order value of a consumer, dictated by the chosen time interval (weekly in our case)
+  - **Monetary Value (for CLTV):** the average order value of a consumer, dictated by the chosen time interval (weekly in the following analysis)
 - Fit and validate the BG/NBD Model for predicted frequency
 - Fit and assess the Gamma Gamma Model for expected avg order value
 - Calculate and assess metrics of interest
