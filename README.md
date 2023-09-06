@@ -194,6 +194,7 @@ In the above analysis, we leverage Buy Till You Die probabilistic models to calc
 Future analyses may look to:
 - Incorporate the power of combining other models to greater understand our consumer base - for example, mapping demographic/taxonomical data to our model's outputs and performing correlation analysis.
 - Engage in model maintenance and tuning when more historic purchasing history is available.
+- Engage in more sophisticated segmentation techniques, such as kmeans clustering to identify and analyze segments with greater accuracy based on grouping distance rather than arbitrary cut-offs.
 - Explore alternative methods or combined model approaches in understanding single-transaction consumer behaviour, retention probability, and lifetime value, and explore how said relationships may differ vs repeat customer behaviour.
 
 ## References
