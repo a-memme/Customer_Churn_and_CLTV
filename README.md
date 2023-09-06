@@ -53,7 +53,7 @@ The Gamma Gamma submodel - very popularly paired with the BG/NBD model - looks t
 
 ## Results 
 ### Model Fitting & Validation 
-*See cells 9-43 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
+*See cells 9-35 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
 
 The lifetimes module in python offers several built in functions to assess the performance/fit of the model. See their documentation here: [Lifetimes Documentation](https://lifetimes.readthedocs.io/en/latest/Quickstart.html)
 
@@ -133,7 +133,7 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
 - Figure A is a perfect example of a missed opportunity - here we had a frequent and consistent repeat consumer with great retention through a large area of their purchasing life, only to see that retention drop off drastically. At any moment from >= week 45, there were several opportunities to take action with aim to prevent this drop off given the information at hand.
  
 ## Analysis
-*See cells 45-50 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
+*See cells 37-43 in [CLTV_and_Churn.ipynb](https://github.com/a-memme/Customer_Churn_and_CLTV/blob/main/CLTV_and_Churn.ipynb) for code*
 
 Through validation and exploration of our model, we can now perform some simple segmenting/sorting tasks to identify consumers of various value characteristics.
 
