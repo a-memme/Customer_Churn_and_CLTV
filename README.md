@@ -138,6 +138,13 @@ Unfortunately there isn't as easy of a method to train/validate the Gamma Gamma 
 
 Through validation and exploration of our model, we can now perform some simple segmenting/sorting tasks to identify consumers of various value characteristics.
 
+### Retention X CLTV Segmentation
+- Segmenting retention and cltv customers by quadrant (A = highest; D = lowest)
+
+![image](https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/dd41b397-3f0c-4cf9-a540-dbf84d8b53b9)
+
+    - Although high retention/high cltv and low retention/low cltv buckets make up the largest proportions, we can clearly see that high retention doesn't always lead to the highest cltv, and vice versa
+
 ### High Valued Customers
 - **Best Retention / Churn**
   
@@ -145,7 +152,6 @@ Through validation and exploration of our model, we can now perform some simple 
 
     - In line with our representation of churn history, consumers with best retention/churning probabilities all have long histories of purchase (recency), have purchased recently (T - recency --> usually within the past 0-1 weeks) and have purchased frequently through that life (frequency).
         - This gives us further confirmation in the model's outputs regarding retention
-    - As we can see, customers with the lowest (best) probability of churning aren't necessarily considered the most "valuable" from a monetary sense (CLTV). 
     - Consumers in this distinction may be appropriate candidates for incentivization via rewards and/or strategical upselling given their high likihood of repurchase and varying aov/predicted lifetime values.
 
 - **Most Valuable**
@@ -173,7 +179,7 @@ In contrast, we most likely will look to identify consumers who have a higher li
 <img width="1197" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/dccc5077-d292-4bae-8031-e4d16728ec4b">
 
 ## Conclusion
-In the above analysis, we leverage Buy Till You Die probabilistic models to calculate customer retention and churn, and ultimately, predict ltv at a duration of our choosing. By expressing churn in probabilistic means, we are able to represent the dynamic nature of retention and lifetime value more appropriately, accounting for the innate censored-nature of the data at hand. Furthermore, we can benefit from some typical merits of the BG/NBD model, namely speedy optimization, easy deployment and rich interpretability as exemplified above. 
+In the above analysis, we leverage Buy Till You Die probabilistic models to calculate customer retention and churn, and ultimately, predict ltv at a duration of our choosing. By expressing churn in probabilistic means, we are able to represent the dynamic nature of retention and lifetime value more appropriately, accounting for the innate censored-nature of the data at hand. Furthermore, we can benefit from some typical merits of the BG/NBD model, namely speedy optimization, easy deployment and rich interpretability as exemplified above. Finally, the rich output from the model allows us to sort, segment and analyze our consumers with a variety of approaches.
 
 ### Limitations 
 - **Long Purchasing History**
