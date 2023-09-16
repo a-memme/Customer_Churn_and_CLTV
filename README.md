@@ -84,8 +84,8 @@ The lifetimes module in python offers several built in functions to assess the p
 <img width="497" alt="image" src="https://github.com/a-memme/Customer_Churn_and_CLTV/assets/79600550/bccbf06e-48dd-4dcb-82ea-50c109490c5d">
 
     - General positive bias in the model's predictions as reflected previously, however at the least, still captures very important trends in the data, namely that:
-        - As the time from the customer's last purchase increases, their average frequency of purchasing decreases exponentially 
-            - Areas to note may be the 10 week or 20 week periods (pseudo "elbow-method" approach or when avg frequency levels off)
+        - As the time from the customer's last purchase increases, their average frequency of purchasing decreases
+            - Areas to note may be the 10 week or 20 week periods (can leverage the "elbow-method" approach to generally choose areas of importance)
         - Consumers that are active for longer periods of time tend to see higher avg purchasing frequencies.
             - Areas to note may be ~ 35 - 45 week marks 
 
