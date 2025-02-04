@@ -3,7 +3,7 @@
 
 ## Overview
 ### Purpose
-Churn, retention and lifetime value are all trigger terms thrown around constantly in the professional world  - amidst the chatter, what's certain is being able to accurately identify, calculate and understand these metrics are critical to any business looking to understand their consumer base and maximize their potential.
+Churn, retention and lifetime value are hot-topic terms quite commonly thrown around in the professional world  - amidst the chatter, what's certain is being able to accurately identify, calculate and understand these metrics are critical to any business looking to understand their consumer base and maximize their potential.
 
 Although common analytic approaches such as clustering or classification can be effective in segmenting or predicting churn respectively, one key issue that often exists is the censored data present - that is, the customer's purchasing lifetime is typically unfinished, making the application of this classification (whether a customer has churned or not) very problematic. This is particularly relevant in non-contractual/non-subscription based business settings where a consumer can decide to repurchase or drop off at any moment, so any distinguishing feature of churn needed in order to train a model would essentially be arbitrary (i.e a customer that just made a purchase yesterday may churn tomorrow, and a customer who hasn't made a purchase in 2 years may purchase again tomorrow).
 
